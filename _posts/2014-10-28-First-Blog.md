@@ -10,3 +10,5 @@ title: 测试
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
 试试看超链接 [我的github](https://github.com/weiweizhan).
+
+换台电脑试试看~
