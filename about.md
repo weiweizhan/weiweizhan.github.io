@@ -8,7 +8,7 @@ Hi! I'm a Java web developer.
 
 ### More Information
 
-Coming soon! 
+Coming soon!!!
 
 ### Contact me
 
