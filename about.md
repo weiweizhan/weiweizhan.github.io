@@ -9,13 +9,7 @@ Hi! 我是一名Java后端开发工程师~
 
 #### 学习中：
 
-Tomcat
-
-Spring
-
-Struts
-
-Maven
+Tomcat, Spring, Struts, Maven
 
 Database(InnoDB, MongoDB, memcached)
 
@@ -25,9 +19,7 @@ Front-end
 
 #### 感兴趣的东西：
 
-自然语言处理
-
-社交网络分析
+自然语言处理, 社交网络分析
 
 ####联系方式：
 
