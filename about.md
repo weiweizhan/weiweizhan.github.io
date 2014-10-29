@@ -4,15 +4,31 @@ title: 关于我
 permalink: /about/
 ---
 
-Hi! 我是一名Java后端开发工程师（菜鸟），现在上海某互联网公司搬砖.
+Hi! 我是一名Java后端开发工程师~
 
-### 工作中接触到的内容
 
-tomcat
-Sprint
+#### 学习中：
+
+Tomcat
+
+Spring
+
 Struts
+
+Maven
+
+Database(InnoDB, MongoDB, memcached)
+
+Front-end
+
 ......
 
-### 下面的链接可以找到我：
+#### 感兴趣的东西：
+
+自然语言处理
+
+社交网络分析
+
+####联系方式：
 
 [zdw1224@gmail.com](mailto:zdw1224@gmail.com)
