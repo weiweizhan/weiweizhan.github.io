@@ -20,6 +20,7 @@ Statement中使用字符串拼接，很可能被SQL注入攻击；而PreparedSta
 例如，通过用户名和密码从表中获取用户信息：
 
 	strSQL = "SELECT * FROM users WHERE (name = '" + userName + "') and (pw = '"+ passWord +"');"
+	
 如果传入`passWord = '"1' OR '1'='1'"`由于`'1'='1'`永远为真，上述语句可以获得表中任意用户的信息。
 
 
