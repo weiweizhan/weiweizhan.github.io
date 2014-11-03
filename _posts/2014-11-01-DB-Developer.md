@@ -25,7 +25,7 @@ Statement中使用字符串拼接，很可能被SQL注入攻击；而PreparedSta
 使用预编译改写为：
 
 	java.sql.PreparedStatement prep = connection.prepareStatement(
-               	 					  "SELECT * FROM users WHERE name = ? AND pw = ?");
+               	 				"SELECT * FROM users WHERE name = ? AND pw = ?");
 	prep.setString(1, username);
 	prep.setString(2, password);
 	prep.executeQuery();
