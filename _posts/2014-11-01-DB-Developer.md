@@ -7,7 +7,22 @@ title: 开发工程师应该知道的数据库使用准则
 
 因此，作为工程师，在开发过程中对于每一个数据库相关的操作都要非常慎重。
 
-#### 使用预编译
+#### 预编译(PreparedStatement)
+
+
+
+代码的可读性和可维护性
+
+性能
+
+安全性
+Statement中使用字符串拼接，很可能被SQL注入攻击；而PreparedStatement先预编译，再填充参数，因此不存在SQL注入。
+例如，通过用户名和密码从表中获取用户信息：
+
+	strSQL = "SELECT * FROM users WHERE (name = '" + userName + "') and (pw = '"+ passWord +"');"
+如果传入`passWord = '"1' OR '1'='1'"`由于`'1'='1'`永远为真，上述语句可以获得表中任意用户的信息。
+
+
 
 
 #### 尽量减少数据库连接次数
