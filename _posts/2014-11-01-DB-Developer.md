@@ -54,3 +54,7 @@ Statement中使用字符串拼接，很可能被SQL注入攻击；而PreparedSta
 
 分库分表，主流程与辅流程分离，使用异步消息的方法更新非核心字段。
 
+
+[参考文献]
+
+1. [阿里双十一数据库技术](http://www.hellodb.net/2014/02/taobao_1111_database.html)
