@@ -24,11 +24,12 @@ title: 开发工程师应该知道的数据库使用(未完成)
 如果传入`passWord = '"1' OR '1'='1'"`由于`'1'='1'`永远为真，上述语句可以获得表中任意用户的信息。
 使用预编译改写为：
 
-	>java.sql.PreparedStatement prep = connection.prepareStatement(
+{% highlight sql %}
+	java.sql.PreparedStatement prep = connection.prepareStatement(
                	 				"SELECT * FROM users WHERE name = ? AND pw = ?");
-	>prep.setString(1, username);
-	>prep.setString(2, password);
-	>prep.executeQuery();
+	prep.setString(1, username);
+	prep.setString(2, password);
+	prep.executeQuery(); {% endhighlight %}
 
 另外，预编译可以提高代码的可读性和可维护性。
 
