@@ -21,7 +21,7 @@ title: 开发工程师应该知道的数据库使用(未完成)
 {% highlight sql %}
 	strSQL = "SELECT * FROM users WHERE (name = '" + userName + "') and (pw = '"+ passWord +"');" {% endhighlight %}
 
-如果传入{% highlight sql %}passWord = '"1' OR '1'='1'"{% endhighlight %}由于{% highlight sql %}'1'='1'{% endhighlight %}永远为真，上述语句可以获得表中任意用户的信息。
+如果传入{% highlight sql %} passWord = '"1' OR '1'='1'" {% endhighlight %} ,由于 {% highlight sql %}'1'='1' {% endhighlight %} 永远为真，上述语句可以获得表中任意用户的信息。
 使用预编译改写为：
 
 {% highlight sql %}
