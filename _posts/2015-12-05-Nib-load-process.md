@@ -41,7 +41,6 @@ action连接: 利用UIControl对象的addTarget:action:forControlEvents:方法�
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @end{% endhighlight %}
 
-
 3. 直接将Outlet设置成为类的私有变量。
 {% highlight sql %}
 @implementation MyViewCell{
