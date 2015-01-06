@@ -32,6 +32,7 @@ action连接: 利用UIControl对象的addTarget:action:forControlEvents:方法�
 #### 在nib文件中定义IBOutlet的三种方式
 
 1. 将Outlet定义为@property，放在h文件中。
+
 不推荐，该方法将IBOutlet完全暴露出来，不符合封装的要求。
 
 2. 将Outlet定义为@property，通过category方式使其成为类的私有变量，放在m文件中。
@@ -41,6 +42,7 @@ action连接: 利用UIControl对象的addTarget:action:forControlEvents:方法�
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @end{% endhighlight %}
+
 
 3. 直接将Outlet设置成为类的私有变量。
 
