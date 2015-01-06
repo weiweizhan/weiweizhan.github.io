@@ -21,7 +21,7 @@ title: iOS中nib文件的加载过程
 2. 解压nib文件中的object graph数据，针对不同对象，使用不同的方法初始化这些对象。符合NSCoding协议的对象利用initWithCoder:来初始化，这其中包括UIView和UIViewController的所有子类。自定义对象接收到init消息。
 
 3. 重建nib文件中对象(action, outlet)之间的连接，包括file’s owner和其他占位对象。
-outlet连接: 利用setValue:forKey方法重建各个outlet之间的连接。该方法寻找合适的accessor方法，否则失败。设置outlet会对观察者发出KVO通知，这些通知可能在所有内部对象重建连接前发送，一定在awakeFromNib前发送。
+outlet连接: 利用setValue:forKey方法重建各个outlet之间的连接。该方法寻找<font color="red">合适的accessor方法，否则失败</font>。设置outlet会对观察者发出KVO通知，这些通知可能在所有内部对象重建连接前发送，一定在awakeFromNib前发送。
 action连接: 利用UIControl对象的addTarget:action:forControlEvents:方法来配置action。如果target为nil，action则由responder chain处理。
 
 4. 向nib文件中定义了selector的合适对象发送awakeFromNib消息。只发送给nib加载代码初始化的接口对象，不发送给file’s owner, first responder和其他占位对象。
