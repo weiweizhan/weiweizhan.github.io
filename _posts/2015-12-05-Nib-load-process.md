@@ -35,14 +35,15 @@ action连接: 利用UIControl对象的addTarget:action:forControlEvents:方法�
 不推荐，该方法将IBOutlet完全暴露出来，不符合封装的要求。
 
 2. 将Outlet定义为@property，通过category方式使其成为类的私有变量，放在m文件中。
-{% highlight sql %}
+{% highlight objective-c %}
 @interface MyViewCell()
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
-@end{% endhighlight %}
+@end
+{% endhighlight %}
 
 3. 直接将Outlet设置成为类的私有变量。
-{% highlight sql %}
+{% highlight objective-c %}
 @implementation MyViewCell{
      IBOutlet UILabel *titleLbl;
      IBOutlet UIImageView *iconImg;
