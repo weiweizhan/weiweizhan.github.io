@@ -5,7 +5,7 @@ title: iOS中nib文件的加载过程
 
 在TableViewController中，经常看到这样的代码：
 
-{% highlight oc %}
+{% highlight sql %}
 	- (NVClientAccountViewCell *)loadCell{
     NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"NVClientAccountViewCell" owner:nil options:nil];
     return (NVClientAccountViewCell *)[views objectAtIndex:0];
@@ -36,7 +36,7 @@ action连接: 利用UIControl对象的addTarget:action:forControlEvents:方法�
 
 2. 将Outlet定义为@property，通过category方式使其成为类的私有变量，放在m文件中。
 
-{% highlight oc %}
+{% highlight sql %}
 @interface MyViewCell()
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
@@ -44,7 +44,7 @@ action连接: 利用UIControl对象的addTarget:action:forControlEvents:方法�
 
 3. 直接将Outlet设置成为类的私有变量。
 
-{% highlight oc %}
+{% highlight sql %}
 @implementation MyViewCell{
      IBOutlet UILabel *titleLbl;
      IBOutlet UIImageView *iconImg;
