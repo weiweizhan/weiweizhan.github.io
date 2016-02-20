@@ -23,6 +23,6 @@ iOS
 
 自然语言处理, 社交网络分析
 
-####联系方式：
+#### 联系方式：
 
 [zdw1224@gmail.com](mailto:zdw1224@gmail.com)
