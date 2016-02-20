@@ -6,9 +6,9 @@ title: iOS中nib文件的加载过程
 在TableViewController中，经常看到这样的代码：
 
 {% highlight objective-c %}
-	- (NVClientAccountViewCell *)loadCell{
-    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"NVClientAccountViewCell" owner:nil options:nil];
-    return (NVClientAccountViewCell *)[views objectAtIndex:0];
+- (MyTableviewCell *)loadCell{
+    NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"MyTableviewCell" owner:nil options:nil];
+    return (MyTableviewCell *)[views objectAtIndex:0];
 }
 {% endhighlight %}
 
