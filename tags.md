@@ -6,5 +6,5 @@ permalink: /tags/
 
 ### iOS:
 
-* [nib文件的加载过程](/Nib-load-process/)
+* [nib文件的加载过程](/nib-load-process/)
 
