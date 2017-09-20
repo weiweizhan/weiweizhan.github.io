@@ -5,7 +5,7 @@ title: iOS中nib文件的加载过程
 
 在TableViewController中，经常看到这样的代码：
 
-{% highlight objective-c %}
+{% highlight objective-c linenos %}
 - (MyTableviewCell *)loadCell{
     NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"MyTableviewCell" owner:nil options:nil];
     return (MyTableviewCell *)[views objectAtIndex:0];
@@ -35,7 +35,7 @@ title: iOS中nib文件的加载过程
 不推荐，该方法将IBOutlet完全暴露出来，不符合封装的要求。
 
 - 将Outlet定义为@property，通过category方式使其成为类的私有变量，放在m文件中。
-{% highlight objective-c %}
+{% highlight objective-c linenos %}
 @interface MyViewCell()
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
@@ -43,7 +43,7 @@ title: iOS中nib文件的加载过程
 {% endhighlight %}
 
 - 直接将Outlet设置成为类的私有变量。
-{% highlight objective-c %}
+{% highlight objective-c linenos %}
 @implementation MyViewCell{
      IBOutlet UILabel *titleLbl;
      IBOutlet UIImageView *iconImg;
