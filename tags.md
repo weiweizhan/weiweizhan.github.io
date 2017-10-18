@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 title: 分类
 permalink: /tags/
 ---

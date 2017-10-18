@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: article
 title: iOS中nib文件的加载过程
 ---
+
 
 在TableViewController中，经常看到这样的代码：
 

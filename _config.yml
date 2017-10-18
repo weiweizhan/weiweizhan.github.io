@@ -1,76 +1,64 @@
-#
-# This file contains configuration flags to customize your site
-#
+# Site wide configuration
 
-# Name of your site (displayed in the header)
-name: 伟伟的个人博客
+title: "伟伟的个人博客"
+description: "成长记录"
+logo: logo.jpg
+teaser: teaser.jpg
+locale: zh-cn
+url:
+feed:
+  path: atom.xml
 
-# Short bio or description (displayed in the header)
-description: 成长记录
+# Jekyll configuration
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: http://i2.s2.dpfile.com/pc/44face7cc7a8dc81efa6df0384e195cf(249c249)/thumb.jpg #dianping
-#https://avatars3.githubusercontent.com/u/2618487
-#https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
-
-#
-# Flags below are optional
-#
-
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble: 
-  email: 
-  facebook: 
-  flickr: 
-  github: weiweizhan
-  instagram: 
-  linkedin: 
-  pinterest: 
-  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: 
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-
-# Your disqus shortname, entering this will enable commenting on posts
-disqus: littleyes
-
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: 
-
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
-url: 
-
-# If you're hosting your site at a Project repository on GitHub pages 
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
-
-#
-# !! You don't need to change any of the configuration flags below !!
-#
-
-markdown: kramdown
-highlighter: rouge
-permalink: /:title/
-
-# The release of Jekyll Now that you're using
-version: v1.0.0
-
-# Set the Sass partials directory, as we're using @imports
 sass:
-  sass_dir: _scss
-  style: :expanded # You might prefer to minify using :compressed
-
-# Use the following plug-ins
+  sass_dir: _sass
+  style: compressed
+permalink: /:categories/:title/
+kramdown:
+  toc_levels: 1..2
+highlighter: rouge
 gems:
-  - jemoji # Emoji please!
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
 
-# Exclude these files from your production _site
+
+# Site owner
+owner:
+  name:
+  email:
+  twitter:
+  google:
+    ad-client:
+    ad-slot:
+  bio:
+  avatar: bio-photo.jpg # 160x160 px image for author byline
+  disqus-shortname:
+
+
+include:
+  - .htaccess
 exclude:
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
-    - README.md
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp
