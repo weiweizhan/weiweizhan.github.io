@@ -1,13 +1,14 @@
 ---
 layout: article
-title: iOS中nib文件的加载过程
+title: nib文件的加载过程
+excerpt: iOS中nib文件是如何构造成为View，定义IBOutlet又有什么注意点
 image:
   teaser: nib.jpg
 ---
 
 
 在TableViewController中，经常看到这样的代码：
-{% highlight objective-c linenos %}
+{% highlight ruby linenos %}
 - (MyTableviewCell *)loadCell{
     NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"MyTableviewCell" owner:nil options:nil];
     return (MyTableviewCell *)[views objectAtIndex:0];
@@ -37,7 +38,7 @@ image:
 不推荐，该方法将IBOutlet完全暴露出来，不符合封装的要求。
 
 - 将Outlet定义为@property，通过category方式使其成为类的私有变量，放在m文件中。
-{% highlight objective-c linenos %}
+{% highlight ruby linenos %}
 @interface MyViewCell()
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
@@ -45,7 +46,7 @@ image:
 {% endhighlight %}
 
 - 直接将Outlet设置成为类的私有变量。
-{% highlight objective-c linenos %}
+{% highlight ruby linenos %}
 @implementation MyViewCell{
      IBOutlet UILabel *titleLbl;
      IBOutlet UIImageView *iconImg;
