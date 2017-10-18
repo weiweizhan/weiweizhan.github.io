@@ -1,7 +1,10 @@
-- title: 分类
+- title: 首页
+  url: /
+
+- title: 归档
   url: /tags/
-  excerpt: "文章分类"
-  image: 300x200.gif
+  excerpt: "文章归档"
+  # image: 300x200.gif
 
 - title: 关于
   url: /about/

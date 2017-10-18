@@ -1,11 +1,12 @@
 ---
 layout: article
 title: iOS中nib文件的加载过程
+image:
+  teaser: nib.jpg
 ---
 
 
 在TableViewController中，经常看到这样的代码：
-
 {% highlight objective-c linenos %}
 - (MyTableviewCell *)loadCell{
     NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"MyTableviewCell" owner:nil options:nil];
